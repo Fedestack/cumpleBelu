@@ -81,7 +81,7 @@ button:hover {
 }
 
 /* Estilos específicos para dispositivos móviles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .container {
     font-size: 14px;
   }
