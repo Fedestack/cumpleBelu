@@ -2,7 +2,7 @@ function confirmarAsistencia(respuesta) {
   let mensaje = '';
 
   if (respuesta === 'Sí') {
-    mensaje = 'Confirmo que asistiré a la fiesta de MARÍA BELÉN. Mi nombre y apellido es:';
+    mensaje = 'Confirmo que asistiré al cumple de  BELU. Mi nombre y apellido es:';
   } else {
     mensaje = 'No podré asistir a la fiesta. Mi nombre y apellido es:';
   }
@@ -28,13 +28,21 @@ function confirmarAsistencia(respuesta) {
     enlaceWhatsApp.appendChild(botonEnlace);
   }
   botonEnlace.textContent = 'Ir a WhatsApp';
+      // Añade un manejador de eventos al botón
+      botonEnlace.addEventListener('click', () => {
+        // Ejecuta la función confirmarAsistencia con la respuesta actual
+        confirmarAsistencia(respuesta);
+      });
+      enlaceWhatsApp.appendChild(botonEnlace);
 
- // Añade un manejador de eventos al botón
-botonEnlace.addEventListener('click', () => {
-  // Ejecuta la función confirmarAsistencia
-  confirmarAsistencia('Sí');
-});
+      // Agrega el enlace al contenedor deseado.
+      let confirmacion = document.getElementById('confirmacion');
+      confirmacion.appendChild(enlaceWhatsApp);
+  // Simula un clic en el enlace.
+  botonEnlace.click();
 }
+
+
 
 function createConfeti() {
   const confetiContainer = document.getElementById('confeti-container');
@@ -48,6 +56,7 @@ function createConfeti() {
     confetiContainer.appendChild(confeti);
   }
 }
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -56,6 +65,7 @@ function getRandomColor() {
   }
   return color;
 }
+
 // Llama a la función createConfeti cuando desees activar el efecto de confeti
 // Por ejemplo, puedes llamarla cuando se carga la página o cuando un usuario confirma su asistencia.
 window.addEventListener('load', createConfeti);
