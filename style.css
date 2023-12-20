@@ -1,3 +1,4 @@
+/* Estilos comunes para ambos tamaños de pantalla */
 body {
   font-family: 'Arial', sans-serif;
   margin: 20;
@@ -7,18 +8,17 @@ body {
   justify-content: center;
   height: 100vh;
 }
+
 p {
   font-family: 'Cookie', cursive;
   font-size: 20px;
   text-shadow: 1px 1px 1px black;
 }
 
-
-
 h1 {
   font-family: 'Cookie', cursive;
   font-size: 40px;
-  margin-top: 20px; 
+  margin-top: 20px;
   text-shadow: 1px 1px 1px black;
 }
 
@@ -34,7 +34,7 @@ h1 {
   padding: 30px;
   padding-bottom: 70px;
   height: 100vh;
-  overflow: hidden; /* Asegura que el contenido no se desborde en dispositivos móviles */
+  overflow: hidden;
 }
 
 #confeti-container {
@@ -46,25 +46,28 @@ h1 {
   z-index: 999;
 }
 
-#confirmacion {
-  margin-top: auto;
-}
-
 button {
   background-color: #4CAF50;
   color: #fff;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px;
-  margin-top: 570px;
+  width: auto;
+  font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
 }
 
 button:hover {
   background-color: #45a049;
 }
-
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
 .confeti {
   position: absolute;
   width: 10px;
@@ -74,18 +77,29 @@ button:hover {
   animation: fall linear infinite;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
 /* Estilos específicos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
   .container {
     font-size: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #confirmacion {
+    display: flex;
+    flex-direction: row; /* Alinea los botones uno al lado del otro */
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 10px; /* Añade margen entre los botones */
+    white-space: nowrap;
   }
 }
