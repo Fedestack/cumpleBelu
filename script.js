@@ -11,19 +11,23 @@ function confirmarAsistencia(respuesta) {
   let telefono = '541158045379';
 
   // Crea un enlace de WhatsApp con el número y el mensaje predefinido.
-  let enlaceWhatsApp = document.createElement('a');
+  let enlaceWhatsApp = document.getElementById('enlaceWhatsApp');
+  if (!enlaceWhatsApp) {
+    enlaceWhatsApp = document.createElement('a');
+    enlaceWhatsApp.id = 'enlaceWhatsApp';
+    document.body.appendChild(enlaceWhatsApp);
+  }
   enlaceWhatsApp.href = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
   enlaceWhatsApp.target = '_blank';
 
   // Crea un botón dentro del enlace (puedes personalizar esto según tus necesidades).
-  let botonEnlace = document.createElement('button');
-   botonEnlace.textContent = 'Ir a WhatsApp';
-
-  // Agrega el enlace al botón.
-  enlaceWhatsApp.appendChild(botonEnlace);
-
-  // Agrega el enlace al DOM (fuera del flujo normal del documento para que no afecte el diseño).
-  document.body.appendChild(enlaceWhatsApp);
+  let botonEnlace = document.getElementById('botonEnlace');
+  if (!botonEnlace) {
+    botonEnlace = document.createElement('button');
+    botonEnlace.id = 'botonEnlace';
+    enlaceWhatsApp.appendChild(botonEnlace);
+  }
+  botonEnlace.textContent = 'Ir a WhatsApp';
 
   // Simula un clic en el enlace.
   botonEnlace.click();
