@@ -22,7 +22,7 @@ body {
 }
 
 #confirmacion {
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 button {
@@ -33,6 +33,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin: 10px;
+  margin-top: 640px;
 }
 
 button:hover {
@@ -44,4 +45,5 @@ button:hover {
   .container {
     font-size: 14px; /* Ajusta según sea necesario */
   }
+
 }
