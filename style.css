@@ -81,7 +81,7 @@ button:hover {
 }
 
 /* Estilos específicos para dispositivos móviles */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
   .container {
     font-size: 14px;
   }
@@ -91,7 +91,7 @@ button:hover {
   }
   p {
     font-family: 'Cookie', cursive;
-    font-size: 19px;
+    font-size: 17px;
     text-shadow: 1px 1px 1px black;
   }
 
