@@ -29,8 +29,11 @@ function confirmarAsistencia(respuesta) {
   }
   botonEnlace.textContent = 'Ir a WhatsApp';
 
-  // Simula un clic en el enlace.
-  botonEnlace.click();
+ // Añade un manejador de eventos al botón
+botonEnlace.addEventListener('click', () => {
+  // Ejecuta la función confirmarAsistencia
+  confirmarAsistencia('Sí');
+});
 }
 
 function createConfeti() {
