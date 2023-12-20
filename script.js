@@ -8,7 +8,7 @@ function confirmarAsistencia(respuesta) {
   }
 
   // Reemplaza "TUNUMERODETELEFONO" con tu número de teléfono, incluyendo el código de país sin el símbolo "+".
-  let telefono = '541158045379';
+  let telefono = '541140709888';
 
   // Crea un enlace de WhatsApp con el número y el mensaje predefinido.
   let enlaceWhatsApp = document.getElementById('enlaceWhatsApp');
