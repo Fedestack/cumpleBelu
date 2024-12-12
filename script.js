@@ -2,9 +2,9 @@ function confirmarAsistencia(respuesta) {
   let mensaje = '';
 
   if (respuesta === 'Sí') {
-    mensaje = 'Confirmo que asistiré al cumple de  BELU. Mi nombre y apellido es:';
+    mensaje = 'Confirmo que asistiré al cumple de  BELU. Mi nombre es:';
   } else {
-    mensaje = 'No podré asistir a la fiesta. Mi nombre y apellido es:';
+    mensaje = 'No podré asistir a la fiesta. Mi nombre es:';
   }
 
   // Reemplaza "TUNUMERODETELEFONO" con tu número de teléfono, incluyendo el código de país sin el símbolo "+".
