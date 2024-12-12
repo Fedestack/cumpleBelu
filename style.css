@@ -27,7 +27,7 @@ h1 {
 
 .container {
   position: relative;
-  background-image: url('imagen/CumpleBelu.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('imagen/CumpleBelu.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -90,7 +90,8 @@ button:hover {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 25px;
+    margin: 20px 0px 10px 0px;
   }
 
   p {
@@ -114,6 +115,14 @@ button:hover {
       font-size: 15px;
       margin: 5px 0px;
     }
+
+  }
+
+  @media only screen and (min-height: 568px) and (max-height: 790px){
+      .container{
+        position: absolute;
+      }
+
 
   }
 
