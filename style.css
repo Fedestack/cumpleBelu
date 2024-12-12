@@ -95,6 +95,7 @@ button:hover {
 
   p {
     font-family: sans-serif, cursive;
+    margin: 10px 0px;
     font-size: 17px;
     text-shadow: 1px 1px 1px black;
   }
@@ -110,7 +111,7 @@ button:hover {
   @media only screen and (max-height: 790px) {
 
     p{
-      font-size: 14px;
+      font-size: 15px;
       margin: 5px 0px;
     }
 
