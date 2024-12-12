@@ -92,6 +92,7 @@ button:hover {
   h1 {
     font-size: 30px;
   }
+
   p {
     font-family: sans-serif, cursive;
     font-size: 17px;
@@ -105,6 +106,14 @@ button:hover {
     bottom: 130px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  @media only screen and (max-height: 790px) {
+
+    p{
+      font-size: 14px;
+      margin: 5px 0px;
+    }
+
   }
 
 }
